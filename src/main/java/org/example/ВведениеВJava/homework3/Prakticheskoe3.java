@@ -1,4 +1,4 @@
-package org.example.homework3;
+package org.example.ВведениеВJava.homework3;
 
 public class Prakticheskoe3 {
     public static void main(String[] args) {
