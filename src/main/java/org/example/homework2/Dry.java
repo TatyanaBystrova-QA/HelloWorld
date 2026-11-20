@@ -1,11 +1,12 @@
 package org.example.homework2;
 
-import static org.example.homework2.Day.*;
+import static org.example.homework2.Day.SATURDAY;
+import static org.example.homework2.Day.SUNDAY;
 
 public class Dry {
     public static void main(String[] args) {
         System.out.println(isWeekend("saturday"));
-        String[] week = {"Monday", "Tuesday", "Saturday", "Sunday", "Friday"};
+        String[] week = {"Saturday", "Sunday"};
         System.out.println(weekendCount(week));
         System.out.println(weekdayCount(week));
     }
@@ -25,12 +26,7 @@ public class Dry {
     }
 
     public static int weekdayCount(String[] days) {
-        int count = 0;
-        for (String day : days) {
-            if (!isWeekend(day)) {
-                count++;
-            }
-        }
-        return count;
+        return days.length - weekendCount(days);
+
     }
 }
